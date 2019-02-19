@@ -893,9 +893,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","47");
+		_this.setReserved("build","1");
 	} else {
-		_this.h["build"] = "47";
+		_this.h["build"] = "1";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -4958,17 +4958,17 @@ EditorState.__name__ = "EditorState";
 EditorState.__super__ = flixel_FlxState;
 EditorState.prototype = $extend(flixel_FlxState.prototype,{
 	createMenu: function() {
-		var newButton = new LableButton("New",4,4,function() {
+		var newButton = new LableButton("New",4,4,"FF22AA22",function() {
 			haxe_Log.trace("NEW",{ fileName : "source/EditorState.hx", lineNumber : 16, className : "EditorState", methodName : "createMenu"});
 			return;
 		});
 		this.add(newButton);
-		var openButton = new LableButton("Open",88,4,function() {
+		var openButton = new LableButton("Open",88,4,"FFAA2222",function() {
 			haxe_Log.trace("OPEN",{ fileName : "source/EditorState.hx", lineNumber : 21, className : "EditorState", methodName : "createMenu"});
 			return;
 		});
 		this.add(openButton);
-		var saveButton = new LableButton("Save",172,4,function() {
+		var saveButton = new LableButton("Load",172,4,"FF2222AA",function() {
 			haxe_Log.trace("SAVE",{ fileName : "source/EditorState.hx", lineNumber : 26, className : "EditorState", methodName : "createMenu"});
 			return;
 		});
@@ -7562,8 +7562,8 @@ VectorButton.__super__ = flixel_ui_FlxButton;
 VectorButton.prototype = $extend(flixel_ui_FlxButton.prototype,{
 	__class__: VectorButton
 });
-var LableButton = function(text,x,y,onClick) {
-	VectorButton.call(this,"<sprite width=\"80\" height=\"40\">\r\n\t\t\t\t<brush name=\"green\" color=\"FF33AA33\" />\r\n\t\t\t\t<brush name=\"green2\" color=\"FF229922\" />\r\n\t\t\t\t<brush name=\"green3\" color=\"FF226622\" />\r\n\t\t\t\t<frame>\t\t\t\t\t\r\n\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"80\" height=\"36\" brush=\"green\" />\r\n\t\t\t\t\t<rect x=\"0\" y=\"36\" width=\"80\" height=\"4\" brush=\"green3\" />\r\n\t\t\t\t\t<text x=\"20\" y=\"8\" color=\"FFFFFF\" size=\"14\" text=\"" + text + "\" />\r\n\t\t\t\t</frame>\r\n\t\t\t\t<frame>\t\t\t\t\t\r\n\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"80\" height=\"36\" brush=\"green2\" />\r\n\t\t\t\t\t<rect x=\"0\" y=\"36\" width=\"80\" height=\"4\" brush=\"green3\" />\r\n\t\t\t\t\t<text x=\"20\" y=\"8\" color=\"FFFFFF\" size=\"14\" text=\"" + text + "\" />\r\n\t\t\t\t</frame>\r\n\t\t\t\t<frame>\t\t\t\t\t\r\n\t\t\t\t\t<rect x=\"0\" y=\"2\" width=\"80\" height=\"38\" brush=\"green2\" />\r\n\t\t\t\t\t<rect x=\"0\" y=\"38\" width=\"80\" height=\"2\" brush=\"green3\" />\r\n\t\t\t\t\t<text x=\"20\" y=\"10\" color=\"FFFFFF\" size=\"14\" text=\"" + text + "\" />\r\n\t\t\t\t</frame>\r\n\t\t\t</sprite>",x,y,onClick);
+var LableButton = function(text,x,y,color,onClick) {
+	VectorButton.call(this,"<sprite width=\"80\" height=\"40\">\r\n\t\t\t\t<brush name=\"green\" color=\"" + color + "\" />\r\n\t\t\t\t<brush name=\"green2\" color=\"FF229922\" />\r\n\t\t\t\t<brush name=\"green3\" color=\"FF226622\" />\r\n\t\t\t\t<frame>\t\t\t\t\t\r\n\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"80\" height=\"36\" brush=\"green\" />\r\n\t\t\t\t\t<rect x=\"0\" y=\"36\" width=\"80\" height=\"4\" brush=\"green3\" />\r\n\t\t\t\t\t<text x=\"20\" y=\"8\" color=\"FFFFFF\" size=\"14\" text=\"" + text + "\" />\r\n\t\t\t\t</frame>\r\n\t\t\t\t<frame>\t\t\t\t\t\r\n\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"80\" height=\"36\" brush=\"green2\" />\r\n\t\t\t\t\t<rect x=\"0\" y=\"36\" width=\"80\" height=\"4\" brush=\"green3\" />\r\n\t\t\t\t\t<text x=\"20\" y=\"8\" color=\"FFFFFF\" size=\"14\" text=\"" + text + "\" />\r\n\t\t\t\t</frame>\r\n\t\t\t\t<frame>\t\t\t\t\t\r\n\t\t\t\t\t<rect x=\"0\" y=\"2\" width=\"80\" height=\"38\" brush=\"green2\" />\r\n\t\t\t\t\t<rect x=\"0\" y=\"38\" width=\"80\" height=\"2\" brush=\"green3\" />\r\n\t\t\t\t\t<text x=\"20\" y=\"10\" color=\"FFFFFF\" size=\"14\" text=\"" + text + "\" />\r\n\t\t\t\t</frame>\r\n\t\t\t</sprite>",x,y,onClick);
 };
 $hxClasses["LableButton"] = LableButton;
 LableButton.__name__ = "LableButton";
@@ -62716,7 +62716,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 749140;
+	this.version = 308647;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -107130,7 +107130,7 @@ vector_VectorSprite.prototype = $extend(flixel_FlxSprite.prototype,{
 		var flText = new flixel_text_FlxText();
 		flText.set_text(text);
 		flText.setFormat(null,size,color);
-		flText.drawFrame(true);
+		flText.drawFrame(false);
 		var matrix = new flixel_math_FlxMatrix();
 		matrix.identity();
 		matrix.translate(x,y);
@@ -107194,7 +107194,7 @@ vector_VectorSprite.prototype = $extend(flixel_FlxSprite.prototype,{
 		var pwidth = this.get_width();
 		var pheight = this.get_height();
 		var w = this.frameNodes.length * Math.round(this.get_width());
-		this.makeGraphic(w,Math.round(this.get_height()),0);
+		this.makeGraphic(w,Math.round(this.get_height()),0,true);
 		var _g = 0;
 		var _g1 = this.frameNodes.length;
 		while(_g < _g1) {
@@ -107208,8 +107208,6 @@ vector_VectorSprite.prototype = $extend(flixel_FlxSprite.prototype,{
 		this.set_frames(flixel_graphics_frames_FlxTileFrames.fromGraphic(tmp,point));
 		this.set_width(pwidth);
 		this.set_height(pheight);
-		this.animation.add("simple",[0,1],1);
-		this.animation.play("simple");
 	}
 	,parseBrush: function(elem) {
 		var name = haxe_xml__$Access_AttribAccess_$Impl_$.resolve(elem,"name");

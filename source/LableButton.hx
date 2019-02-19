@@ -1,3 +1,11 @@
+
+typedef LableButtonSettings = {
+	var x:Int;
+	var y:Int;
+	var onClick:Void->Void;
+	var ?color:String;	
+}
+
 /**
  * Button with lable
  */
@@ -5,9 +13,9 @@ class LableButton extends VectorButton {
 	/**
 	 * Constructor
 	 */
-	public function new(text:String, x:Int, y:Int, onClick:Void->Void) {
+	public function new(text:String, x:Int, y:Int, color:String, onClick:Void->Void) {
 		super('<sprite width="80" height="40">
-				<brush name="green" color="FF33AA33" />
+				<brush name="green" color="${color}" />
 				<brush name="green2" color="FF229922" />
 				<brush name="green3" color="FF226622" />
 				<frame>					

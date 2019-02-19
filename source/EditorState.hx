@@ -12,20 +12,20 @@ class EditorState extends FlxState {
 	 * Create menu buttons
 	 */
 	function createMenu() {
-		var newButton = new LableButton("New", 4, 4, () -> {
+		var newButton = new LableButton("New", 4, 4, "FF22AA22", () -> {
 			trace("NEW");
 		});
 		add(newButton);		
 
-		var openButton = new LableButton("Open", 88, 4, () -> {
+		var openButton = new LableButton("Open", 88, 4, "FFAA2222", () -> {
 			trace("OPEN");
 		});
 		add(openButton);
 
-		var saveButton = new LableButton("Save", 172, 4, () -> {
+		var saveButton = new LableButton("Load", 172, 4, "FF2222AA", () -> {
 			trace("SAVE");
 		});
-		add(saveButton);		
+		add(saveButton);
 	}
 
 	/**
