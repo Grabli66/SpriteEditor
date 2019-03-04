@@ -1,3 +1,5 @@
+package widgets;
+
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
 
@@ -11,8 +13,6 @@ class DrawingArea extends FlxSprite {
     public function new() {
         super();
     }
-
-
 
     /**
      * Prepare and draw area

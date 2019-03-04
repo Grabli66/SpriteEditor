@@ -1,3 +1,5 @@
+package widgets;
+
 import flixel.graphics.frames.FlxTileFrames;
 import flixel.math.FlxPoint;
 import vector.VectorSprite;

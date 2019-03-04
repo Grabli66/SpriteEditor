@@ -1,10 +1,4 @@
-
-typedef LableButtonSettings = {
-	var x:Int;
-	var y:Int;
-	var onClick:Void->Void;
-	var ?color:String;	
-}
+package widgets;
 
 /**
  * Button with lable

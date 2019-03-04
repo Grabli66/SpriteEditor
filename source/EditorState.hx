@@ -1,12 +1,8 @@
+import widgets.DrawingToolbar.ToolbarButton;
 import flixel.FlxG;
 import flixel.util.FlxColor;
-import flixel.FlxSprite;
-import flixel.math.FlxPoint;
-import flixel.graphics.frames.FlxTileFrames;
 import flixel.FlxState;
-import flixel.ui.FlxButton;
-import vector.VectorSprite;
-using flixel.util.FlxSpriteUtil;
+import widgets.*;
 
 /**
  * State for editing vector sprite
@@ -19,14 +15,14 @@ class EditorState extends FlxState {
 		var newButton = new LableButton("New", 4, 4, "FF22AA22", () -> {
 			trace("NEW");
 		});
-		add(newButton);		
+		add(newButton);
 
 		var openButton = new LableButton("Open", 88, 4, "FFAA2222", () -> {
 			trace("OPEN");
 		});
 		add(openButton);
 
-		var saveButton = new LableButton("Load", 172, 4, "FF2222AA", () -> {
+		var saveButton = new LableButton("Save", 172, 4, "FF2222AA", () -> {
 			trace("SAVE");
 		});
 		add(saveButton);
@@ -35,7 +31,7 @@ class EditorState extends FlxState {
 	/**
 	 * Create area for drawing
 	 */
-	function createDrawingArea() {		
+	function createDrawingArea() {
 		var sprite = new DrawingArea();
 		sprite.make(200, 200, FlxColor.WHITE);
 		sprite.x = FlxG.width / 2 - sprite.width / 2;
@@ -47,7 +43,8 @@ class EditorState extends FlxState {
 	 * Create panel with tools for drawing
 	 */
 	function createToolPanel() {
-
+		var panel = new DrawingToolbar();		
+		add(panel);
 	}
 
 	/**
